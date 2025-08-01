@@ -27,3 +27,72 @@
   scrollbar-width: thin; 
   scrollbar-color: #555 transparent; 
 }
+
+
+
+
+/* src/index.css */
+
+/* Add this section if you don't have it, or verify/replace your existing one */
+/* Gemini-like Loading Dots */
+.gemini-dots {
+  display: flex;
+  align-items: center;
+  height: 1em; /* Adjust based on your text size, ensures dots are vertically centered with text */
+}
+
+.gemini-dots .dot {
+  width: 7px; /* Size of the dot */
+  height: 7px; /* Size of the dot */
+  background-color: #a0aec0; /* A light gray color for dots (can be changed to blue-400 etc.) */
+  border-radius: 50%;
+  margin: 0 3px; /* Spacing between dots */
+  opacity: 0; /* Start invisible */
+  animation: gemini-bounce 1.2s infinite ease-in-out; /* Name of animation, duration, repeat, timing function */
+}
+
+.gemini-dots .dot-1 {
+  animation-delay: -0.4s; /* Stagger the animation start for the first dot */
+}
+
+.gemini-dots .dot-2 {
+  animation-delay: -0.2s; /* Stagger the animation start for the second dot */
+}
+
+.gemini-dots .dot-3 {
+  animation-delay: 0s; /* Third dot starts immediately (or adjust for more delay) */
+}
+
+/* Keyframes for the actual bounce/fade effect */
+@keyframes gemini-bounce {
+  0%, 100% {
+    transform: translateY(0); /* Start and end position */
+    opacity: 0.5; /* Slightly faded */
+  }
+  50% {
+    transform: translateY(-5px); /* Bounce up slightly */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* You can also add scrollbar styles if they aren't already there and you want custom scrollbars */
+.scrollbar-thin {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #4a5568 #1a202c; /* thumb track */
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px; /* For vertical scrollbar */
+  height: 8px; /* For horizontal scrollbar */
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #1a202c; /* Track color */
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #4a5568; /* Thumb color */
+  border-radius: 10px;
+  border: 2px solid #1a202c; /* Creates some space around the thumb */
+}
