@@ -5,6 +5,9 @@ import { Send, Sparkles, Image as ImageIcon, Mic } from "lucide-react";
 import ReactMarkdown from "react-markdown"; 
 import { useChat } from "./Context/ChatContext";
 
+// import { useChat } from "./Context/ChatContext";
+
+
 const baseURL = import.meta.env.VITE_API_URL;
 export default function MainContent() {
   // Consume the context
