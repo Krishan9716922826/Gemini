@@ -54,19 +54,19 @@
 
 // src/App.js
 import React from 'react';
-import Sidebar from './components/Sidebar'; // Assuming Sidebar is in src/components
-import MainContent from './components/MainContent'; // Assuming MainContent is in src/components
+import Sidebar from './components/Sidebar'; 
+import MainContent from './components/MainContent';
 import { ChatProvider } from './Components/Context/ChatContext';
-// import { ChatProvider } from './context/ChatContext'; // Import the ChatProvider
-ChatProvider
+
+
 
 function App() {
   return (
     // Wrap your entire application with ChatProvider
     <ChatProvider>
       <div className="flex h-screen bg-gray-950">
-        <Sidebar /> {/* Sidebar no longer needs props passed directly */}
-        <MainContent /> {/* MainContent no longer needs props passed directly */}
+        <Sidebar /> 
+        <MainContent />
       </div>
     </ChatProvider>
   );

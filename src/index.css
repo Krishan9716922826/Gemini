@@ -31,68 +31,64 @@
 
 
 
-/* src/index.css */
-
-/* Add this section if you don't have it, or verify/replace your existing one */
-/* Gemini-like Loading Dots */
 .gemini-dots {
   display: flex;
   align-items: center;
-  height: 1em; /* Adjust based on your text size, ensures dots are vertically centered with text */
+  height: 1em; 
 }
 
 .gemini-dots .dot {
-  width: 7px; /* Size of the dot */
-  height: 7px; /* Size of the dot */
-  background-color: #a0aec0; /* A light gray color for dots (can be changed to blue-400 etc.) */
+  width: 7px; 
+  height: 7px; 
+  background-color: #a0aec0; 
   border-radius: 50%;
-  margin: 0 3px; /* Spacing between dots */
-  opacity: 0; /* Start invisible */
-  animation: gemini-bounce 1.2s infinite ease-in-out; /* Name of animation, duration, repeat, timing function */
+  margin: 0 3px; 
+  opacity: 0; 
+  animation: gemini-bounce 1.2s infinite ease-in-out; 
 }
 
 .gemini-dots .dot-1 {
-  animation-delay: -0.4s; /* Stagger the animation start for the first dot */
+  animation-delay: -0.4s; 
 }
 
 .gemini-dots .dot-2 {
-  animation-delay: -0.2s; /* Stagger the animation start for the second dot */
+  animation-delay: -0.2s; 
 }
 
 .gemini-dots .dot-3 {
-  animation-delay: 0s; /* Third dot starts immediately (or adjust for more delay) */
+  animation-delay: 0s; 
 }
 
 /* Keyframes for the actual bounce/fade effect */
 @keyframes gemini-bounce {
   0%, 100% {
-    transform: translateY(0); /* Start and end position */
-    opacity: 0.5; /* Slightly faded */
+    transform: translateY(0); 
+    opacity: 0.5; 
   }
   50% {
-    transform: translateY(-5px); /* Bounce up slightly */
-    opacity: 1; /* Fully visible */
+    transform: translateY(-5px); 
+    opacity: 1; 
   }
 }
 
-/* You can also add scrollbar styles if they aren't already there and you want custom scrollbars */
+
 .scrollbar-thin {
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #4a5568 #1a202c; /* thumb track */
+  scrollbar-width: thin; 
+  scrollbar-color: #4a5568 #1a202c; 
 }
 
 .scrollbar-thin::-webkit-scrollbar {
-  width: 8px; /* For vertical scrollbar */
-  height: 8px; /* For horizontal scrollbar */
+  width: 8px; 
+  height: 8px; 
 }
 
 .scrollbar-thin::-webkit-scrollbar-track {
-  background: #1a202c; /* Track color */
+  background: #1a202c; 
   border-radius: 10px;
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background-color: #4a5568; /* Thumb color */
+  background-color: #4a5568; 
   border-radius: 10px;
-  border: 2px solid #1a202c; /* Creates some space around the thumb */
+  border: 2px solid #1a202c; 
 }

@@ -1,9 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Send, Sparkles, Image as ImageIcon, Mic } from "lucide-react";
-// Import the custom hook
-// import { useChat } from '../context/ChatContext';
 
-import ReactMarkdown from "react-markdown"; // We'll install this next for Markdown rendering
+
+import ReactMarkdown from "react-markdown"; 
 import { useChat } from "./Context/ChatContext";
 
 export default function MainContent() {
@@ -108,9 +107,7 @@ export default function MainContent() {
         {message.sender === "ai" && !message.isError ? (
           <ReactMarkdown
             children={message.text}
-            // You can add components prop here to customize rendering of specific markdown elements
-            // For example, to make links open in new tab:
-            // components={{ a: ({node, ...props}) => <a target="_blank" rel="noopener noreferrer" {...props} /> }}
+
           />
         ) : (
           // Render user messages and error messages as plain text
@@ -180,13 +177,7 @@ export default function MainContent() {
                 {renderMessageContent(msg)}
               </div>
             ))}
-            {/* {isTyping && (
-              <div className="flex justify-start">
-                <div className="bg-gray-800 p-3 rounded-lg text-gray-400 text-sm italic">
-                  AI is typing...
-                </div>
-              </div>
-            )} */}
+          
 
             {/* THIS IS THE LOADING EFFECT SECTION: */}
             {isTyping && displayedAIText && (
