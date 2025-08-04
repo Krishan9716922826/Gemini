@@ -5,6 +5,7 @@ import { Send, Sparkles, Image as ImageIcon, Mic } from "lucide-react";
 import ReactMarkdown from "react-markdown"; 
 import { useChat } from "./Context/ChatContext";
 
+const baseURL = import.meta.env.VITE_API_URL;
 export default function MainContent() {
   // Consume the context
   const { messages, addMessage, activeChatId, addChatToSidebar } = useChat();
@@ -35,7 +36,8 @@ export default function MainContent() {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/generate", {
+      // const response = await fetch("http://localhost:3001/generate", {
+      const response = await fetch(`${baseURL}/generate`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
